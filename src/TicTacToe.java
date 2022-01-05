@@ -42,16 +42,21 @@ public class TicTacToe {
 
     // update board at specific position, returns wheather its successful in updated or not
     public static boolean updateBoard(int position) {
-        // //0 is X's turn, 1 is O's turn
-        // int playerTurn = 0;
+        //0 is X's turn, 1 is O's turn
 
-
-
-        // if(playerTurn == 1) { // O's turn
-            
-        // } else if (playerTurn == 0) { // X's turn
-            
-        // }
+        if(currentPlayer.equals("O")) { // O's turn
+            if(grid[position].equals(null)) {//if the move happened
+                currentPlayer = "O";
+                grid[position] = "O"; 
+                return true;
+            }
+        } else if (currentPlayer.equals("X")) { // X's turn
+            if(grid[position].equals(null)) {//if the move happened
+                currentPlayer = "X";
+                grid[position] = "X";
+                return true;
+            }
+        }
         return false;
     }
 
