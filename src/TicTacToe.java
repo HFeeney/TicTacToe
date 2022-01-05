@@ -20,7 +20,7 @@ public class TicTacToe {
 
     // displays the tic tac toe board in the console
     public static void display() {
-
+        
     }
 
     // returns a number input by the user
