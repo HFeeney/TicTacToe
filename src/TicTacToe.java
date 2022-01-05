@@ -15,7 +15,8 @@ public class TicTacToe {
 
     // prints out instructions to the user
     public static void printInstructions() {
-
+        System.out.println(
+            "Welcome to the game of TicTacToe! \nInput the space you would like to place a mark at. \nSpaces start at 1 in the top left, 2 is the top middle, etc.\nThe goal is to get three of your marks in a row\nPlayer X goes first");
     }
 
     // displays the tic tac toe board in the console
