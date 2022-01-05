@@ -41,15 +41,61 @@ public class TicTacToe {
         return result;
     }
 
-    // update board at specific position
+    // update board at specific position, returns wheather its successful in updated or not
     public static boolean updateBoard(int position) {
+        // //0 is X's turn, 1 is O's turn
+        // int playerTurn = 0;
 
+
+
+        // if(playerTurn == 1) { // O's turn
+            
+        // } else if (playerTurn == 0) { // X's turn
+            
+        // }
         return false;
     }
 
     // returns whether the puzzle is neither filled nor solved (0), solved (1), or filled (2)
-    public static int checkState() {
+    public static int checkState(String[] board) {
+
+        int counter = 0;
+
+        for(int i = 0; i < 9; i++) {
+            if(board[i].equals("X") || board[i].equals("O")) {
+                counter++;
+            }
+        }
+
+        if (board[0].equals("X") && board[1].equals("X") && board[2].equals("X")
+        || board[0].equals("O") && board[1].equals("O") && board[2].equals("O")) {
+            return 1;
+        } else if (board[3].equals("X") && board[4].equals("X") && board[5].equals("X")
+        || board[3].equals("O") && board[4].equals("O") && board[5].equals("O")) {
+            return 1;
+        } else if (board[6].equals("X") && board[7].equals("X") && board[8].equals("X")
+        || board[6].equals("O") && board[7].equals("O") && board[8].equals("O")) {
+            return 1;
+        } else if (board[0].equals("X") && board[3].equals("X") && board[6].equals("X")
+        || board[0].equals("O") && board[3].equals("O") && board[6].equals("O")) {
+            return 1;
+        } else if (board[1].equals("X") && board[4].equals("X") && board[7].equals("X")
+        || board[1].equals("O") && board[4].equals("O") && board[7].equals("O")) {
+            return 1;
+        } else if (board[2].equals("X") && board[5].equals("X") && board[8].equals("X")
+        || board[2].equals("O") && board[5].equals("O") && board[8].equals("O")) {
+            return 1;
+        } else if (board[0].equals("X") && board[4].equals("X") && board[8].equals("X")
+        || board[0].equals("O") && board[4].equals("O") && board[8].equals("O")) {
+            return 1;
+        } else if (board[2].equals("X") && board[4].equals("X") && board[6].equals("X")
+        || board[0].equals("O") && board[1].equals("O") && board[2].equals("O")) {
+            return 1;
+        } else if (counter >= 9) {
+            return 2; 
+        }
 
         return 0;
+        
     }
 }
