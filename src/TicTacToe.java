@@ -20,8 +20,26 @@ public class TicTacToe {
     }
 
     // displays the tic tac toe board in the console
-    public static void display() {
+    public static void display(String[] spots) {
+       for(int i = 0; i < spots.length; i++){
+           if(spots[i] == null){
+                spots[i] = " ";
 
+           }
+       }
+
+       System.out.println(spots[0] + " | " + spots[1] + " | " + spots[2]);
+        
+       System.out.println("----------");
+
+       System.out.println(spots[3] + " | " + spots[4] + " | " + spots[5]);
+        
+       System.out.println("----------");
+
+       System.out.println(spots[6] + " | " + spots[7] + " | " + spots[8]);
+
+       
+        
     }
 
     // returns a number input by the user
