@@ -9,8 +9,29 @@ public class TicTacToe {
     public static void main(String[] args) throws Exception {
 
 
+        printInstructions();
+        while(playing) {
+            display(grid);
 
-        System.out.println("Hello, World!");
+            boolean updateBoardSuccessful = false;
+            while (!updateBoardSuccessful) {
+                int input = getIntInput() - 1;
+                updateBoardSuccessful = updateBoard(input);
+                if (!updateBoardSuccessful)
+                    System.out.println("Space is already filled");
+            }
+
+            int gameState = checkState(grid);
+            if (gameState == 1) {
+                System.out.println("Someone win!");
+                display(grid);
+                playing = false;
+            } else if (gameState == 2) {
+                System.out.println("Tie...");
+                display(grid);
+                playing = false;
+            }
+        }
     }
 
     // prints out instructions to the user
@@ -52,26 +73,23 @@ public class TicTacToe {
                 if (result >= 1 && result <= 9)
                     break;
             }
-            else System.out.println("Please input a number between 1 - 9");
             console.nextLine();
         }
-        console.close();
         return result;
     }
 
     // update board at specific position, returns wheather its successful in updated or not
     public static boolean updateBoard(int position) {
         //0 is X's turn, 1 is O's turn
-
         if(currentPlayer.equals("O")) { // O's turn
-            if(grid[position].equals(null)) {//if the move happened
-                currentPlayer = "O";
+            if(grid[position].equals(" ")) {//if the move happened
+                currentPlayer = "X";
                 grid[position] = "O"; 
                 return true;
             }
         } else if (currentPlayer.equals("X")) { // X's turn
-            if(grid[position].equals(null)) {//if the move happened
-                currentPlayer = "X";
+            if(grid[position].equals(" ")) { //if the move happened
+                currentPlayer = "O";
                 grid[position] = "X";
                 return true;
             }
