@@ -108,29 +108,29 @@ public class TicTacToe {
             }
         }
 
-        if (board[0].equals("X") && board[1].equals("X") && board[2].equals("X")
-        || board[0].equals("O") && board[1].equals("O") && board[2].equals("O")) {
+        if ((board[0].equals("X") && board[1].equals("X") && board[2].equals("X"))
+        || (board[0].equals("O") && board[1].equals("O") && board[2].equals("O"))) {
             return 1;
-        } else if (board[3].equals("X") && board[4].equals("X") && board[5].equals("X")
-        || board[3].equals("O") && board[4].equals("O") && board[5].equals("O")) {
+        } else if ((board[3].equals("X") && board[4].equals("X") && board[5].equals("X"))
+        || (board[3].equals("O") && board[4].equals("O") && board[5].equals("O"))) {
             return 1;
-        } else if (board[6].equals("X") && board[7].equals("X") && board[8].equals("X")
-        || board[6].equals("O") && board[7].equals("O") && board[8].equals("O")) {
+        } else if ((board[6].equals("X") && board[7].equals("X") && board[8].equals("X"))
+        || (board[6].equals("O") && board[7].equals("O") && board[8].equals("O"))) {
             return 1;
-        } else if (board[0].equals("X") && board[3].equals("X") && board[6].equals("X")
-        || board[0].equals("O") && board[3].equals("O") && board[6].equals("O")) {
+        } else if ((board[0].equals("X") && board[3].equals("X") && board[6].equals("X"))
+        || (board[0].equals("O") && board[3].equals("O") && board[6].equals("O"))) {
             return 1;
-        } else if (board[1].equals("X") && board[4].equals("X") && board[7].equals("X")
-        || board[1].equals("O") && board[4].equals("O") && board[7].equals("O")) {
+        } else if ((board[1].equals("X") && board[4].equals("X") && board[7].equals("X"))
+        || (board[1].equals("O") && board[4].equals("O") && board[7].equals("O"))) {
             return 1;
-        } else if (board[2].equals("X") && board[5].equals("X") && board[8].equals("X")
-        || board[2].equals("O") && board[5].equals("O") && board[8].equals("O")) {
+        } else if ((board[2].equals("X") && board[5].equals("X") && board[8].equals("X"))
+        || (board[2].equals("O") && board[5].equals("O") && board[8].equals("O"))) {
             return 1;
-        } else if (board[0].equals("X") && board[4].equals("X") && board[8].equals("X")
-        || board[0].equals("O") && board[4].equals("O") && board[8].equals("O")) {
+        } else if ((board[0].equals("X") && board[4].equals("X") && board[8].equals("X"))
+        || (board[0].equals("O") && board[4].equals("O") && board[8].equals("O"))) {
             return 1;
-        } else if (board[2].equals("X") && board[4].equals("X") && board[6].equals("X")
-        || board[0].equals("O") && board[1].equals("O") && board[2].equals("O")) {
+        } else if ((board[2].equals("X") && board[4].equals("X") && board[6].equals("X"))
+        || (board[2].equals("O") && board[4].equals("O") && board[6].equals("O"))) {
             return 1;
         } else if (counter >= 9) {
             return 2; 
